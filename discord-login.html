@@ -2,7 +2,7 @@
 
 <head>
     <meta charset='utf-8' />
-    <title>Discord OAUTH</title>
+    <title>NXcraft | Discord OAUTH</title>
 
     <style>
         * {
@@ -41,7 +41,7 @@
             if (location.href.indexOf("code") !== -1) { // Detect if you logged in or not
                 const code = location.href.substring(location.href.indexOf("code") + 5, location.href.length); // Get the code OAUTH gives you
                 const req = new XMLHttpRequest(); // Create a new XMLHttpRequest
-                req.open("POST", "http://localhost:80/user"); // Open the XMLHttpRequest; CHANGE THE PORT TO THE PORT YOU HAVE AS YOUR VARIABLE IN OAUTH.js.
+                req.open("POST", "https://nxcraft.my.id/user"); // Open the XMLHttpRequest; CHANGE THE PORT TO THE PORT YOU HAVE AS YOUR VARIABLE IN OAUTH.js.
                 req.send(code); // Send the code in the request
                 req.onload = () => { // Will run when the request is loaded
                     if (req.status === 500) { // Error
