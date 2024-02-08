@@ -7,8 +7,8 @@ const bodyParser = require('body-parser'); // Import body-parser
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args)); // Import node-fetch asynchronously; see https://www.npmjs.com/package/node-fetch#installation for more info on why this is done.
 
 /* Client Variables */
-const client_id = ''; // Paste your bot's ID here
-const client_secret = ''; // Paste your bot's secret here
+const client_id = '1205005013064093758'; // Paste your bot's ID here
+const client_secret = 'a0bwNzC1cOMu_WfqXJtQ6EsmEFBhZgnV'; // Paste your bot's secret here
 
 /* Define app variables */
 const app = Express(); // Create a web app
@@ -42,7 +42,7 @@ app.post('/user', (req, res) => { // Will run when there are any incoming POST r
     data_1.append('client_id', client_id); // Append the client_id variable to the data
     data_1.append('client_secret', client_secret); // Append the client_secret variable to the data
     data_1.append('grant_type', 'authorization_code'); // This field will tell the Discord API what you are wanting in your initial request.
-    data_1.append('redirect_uri', `http://localhost:${port}`); // This is the redirect URL where the user will be redirected when they finish the Discord login
+    data_1.append('redirect_uri', `https://nxcraft.my.id/login-succses?id=qj2bqpx954acddm2jrz38r2`); // This is the redirect URL where the user will be redirected when they finish the Discord login
     data_1.append('scope', 'identify'); // This tells the Discord API what info you would like to retrieve. You can change this to include guilds, connections, email, etc.
     data_1.append('code', req.body) // This is a key parameter in our upcoming request. It is the code the user got from logging in. This will help us retrieve a token which we can use to get the user's info.
 
